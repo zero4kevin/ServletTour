@@ -5,14 +5,13 @@
     <title>Kevin's Servlet Demo</title>
 </head>
 <body>
-<form action="welcome" method="get">
-    Enter your name<input type="text" name="name"><br/>
-    <input type="submit" name="login">
-</form>
-
 <form action="servlet1" method="post">
-    Name:<input type="text" name="userName"><br/>
+    Name:<input type="text" name="userName">Password:<input type="password" name="userPass"/><br/>
+    <input type="submit" value="login"/>
 </form>
-
+<form action="sendRedirect" method="get">
+    Search content:<input type="text" name="content">
+    <input type="submit" value="Bing Search">
+</form>
 </body>
 </html>
