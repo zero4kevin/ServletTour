@@ -17,8 +17,8 @@ public class FirstServlet extends HttpServlet {
         Cookie cookie=new Cookie("uname", name);
         httpServletResponse.addCookie(cookie);
         out.println("Welcome " + name);
-        out.println("<form action='cookie2'>");
-        out.println("<input type='submit' value='go'");
+        out.println("<form action=\"cookie2\">");
+        out.println("<input type=\"submit\" value=\"go\"");
         out.println("</form>");
         out.close();
     }
