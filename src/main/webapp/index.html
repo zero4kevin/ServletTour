@@ -6,19 +6,37 @@
 </head>
 <body>
 
-<h1>Welcome to Login App by Cookie</h1>
+<h3>Welcome to Login App by Cookie</h3>
 <a href="login.html">Login</a> |
 <a href="LogoutServlet">Logout</a> |
 <a href="ProfileServlet">Profile</a>
+<br/>
+<h3>Example of hidden fields</h3>
+<form action="servletHidden1">
+    name:<input type="text" name="userName"/>
+    <input type="submit" value="go"/>
+</form>
+<br/>
+<h3>Example of HttpSession</h3>
+<form action="httpSession">
+    name:<input type="text" name="userName"/>
+    <input type="submit" value="go"/>
+</form>
 
+<h3>Example of servlet</h3>
 <form action="servlet1" method="post">
-    Name:<input type="text" name="userName">Password:<input type="password" name="userPass"/><br/>
+    Name:<input type="text" name="userName">
+    Password:<input type="password" name="userPass"/><br/>
     <input type="submit" value="login"/>
 </form>
+<br/>
+<h3>Example of SendRedirect</h3>
 <form action="sendRedirect" method="get">
     Search content:<input type="text" name="content">
     <input type="submit" value="Bing Search">
 </form>
+<br/>
+<h3>Example of cookies</h3>
 <form action="cookie1" method="post">
     Name:<input type="text" name="userName"/><br/>
     <input type="submit" value="go"/>

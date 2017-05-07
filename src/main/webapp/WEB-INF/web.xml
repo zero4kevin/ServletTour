@@ -53,6 +53,22 @@
         <servlet-name>ProfileServlet</servlet-name>
         <servlet-class>ProfileServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletHidden1</servlet-name>
+        <servlet-class>ServletHidden</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletHidden2</servlet-name>
+        <servlet-class>ServletHidden2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HttpSession</servlet-name>
+        <servlet-class>FirstHttpSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HttpSession2</servlet-name>
+        <servlet-class>SecondHttpSession</servlet-class>
+    </servlet>
 
     <init-param>
         <param-name>driver</param-name>
@@ -116,5 +132,22 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletHidden1</servlet-name>
+        <url-pattern>/servletHidden1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletHidden2</servlet-name>
+        <url-pattern>/servletHidden2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpSession</servlet-name>
+        <url-pattern>/httpSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpSession2</servlet-name>
+        <url-pattern>/httpSession2</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
