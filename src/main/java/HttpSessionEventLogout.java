@@ -15,10 +15,10 @@ public class HttpSessionEventLogout extends HttpServlet{
         HttpSession session=httpServletRequest.getSession(false);
         if(null!=session){
             out.print(session.getAttribute("uname")+" logged out successfully");
+            session.invalidate();
         }else{
             out.print("Logged out successfully");
         }
-        session.invalidate();
         out.close();
     }
 }

@@ -14,7 +14,7 @@ public class HttpSessionEventFirst extends HttpServlet {
         httpServletResponse.setContentType("text/html");
         PrintWriter out=httpServletResponse.getWriter();
         String name=httpServletRequest.getParameter("userName");
-        httpServletRequest.getSession(false).setAttribute("unamme",name);
+        httpServletRequest.getSession().setAttribute("uname",name);
 
         ServletContext context=getServletContext();
         out.print("<br>total users="+context.getAttribute("totalusers"));

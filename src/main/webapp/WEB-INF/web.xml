@@ -23,6 +23,26 @@
         <param-value>oracle</param-value>
     </context-param>
 
+    <filter>
+        <filter-name>ServletFilter</filter-name>
+        <filter-class>com.zero4kevin.ServletTour.ServletFilter.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ServletFilter</filter-name>
+        <url-pattern>/servletFilter</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>ServletFilter</servlet-name>
+        <servlet-class>com.zero4kevin.ServletTour.ServletFilter.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletFilter</servlet-name>
+        <url-pattern>/servletFilter</url-pattern>
+    </servlet-mapping>
+
+
+
+
 
     <servlet>
         <servlet-name>ServletTour</servlet-name>
@@ -100,14 +120,7 @@
         <servlet-name>ProfileHttpSession</servlet-name>
         <servlet-class>ProfileHttpSession</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>HttpSessionEventFirst</servlet-name>
-        <servlet-class>HttpSessionEventFirst</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>HttpSessionEventLogout</servlet-name>
-        <servlet-class>HttpSessionEventLogout</servlet-class>
-    </servlet>
+
 
     <servlet-mapping>
         <servlet-name>ServletTour</servlet-name>
@@ -185,23 +198,24 @@
         <servlet-name>ProfileHttpSession</servlet-name>
         <url-pattern>/profileHttpSession</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HttpSessionEventFirst</servlet-name>
+        <servlet-class>HttpSessionEventFirst</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HttpSessionEventFirst</servlet-name>
         <url-pattern>/httpSessionEventServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>HttpSessionEventLogout</servlet-name>
+        <servlet-class>HttpSessionEventLogout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HttpSessionEventLogout</servlet-name>
         <url-pattern>/logoutHttpSessionEvent</url-pattern>
     </servlet-mapping>
 
-    <filter>
-        <filter-name>ServletFilter</filter-name>
-        <filter-class>MyFilter</filter-class>
-    </filter>
 
-    <filter-mapping>
-        <filter-name>ServletFilter</filter-name>
-        <url-pattern>/servletFilter</url-pattern>
-    </filter-mapping>
 
 </web-app>
