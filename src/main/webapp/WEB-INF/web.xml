@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 
+    <listener>
+        <listener-class>CountUserHttpSessionListener</listener-class>
+    </listener>
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
@@ -80,6 +84,14 @@
     <servlet>
         <servlet-name>ProfileHttpSession</servlet-name>
         <servlet-class>ProfileHttpSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HttpSessionEventFirst</servlet-name>
+        <servlet-class>HttpSessionEventFirst</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HttpSessionEventLogout</servlet-name>
+        <servlet-class>HttpSessionEventLogout</servlet-class>
     </servlet>
 
     <init-param>
@@ -171,6 +183,14 @@
     <servlet-mapping>
         <servlet-name>ProfileHttpSession</servlet-name>
         <url-pattern>/profileHttpSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpSessionEventFirst</servlet-name>
+        <url-pattern>/httpSessionEventServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpSessionEventLogout</servlet-name>
+        <url-pattern>/logoutHttpSessionEvent</url-pattern>
     </servlet-mapping>
 
 </web-app>
