@@ -9,6 +9,21 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
+    <init-param>
+        <param-name>driver</param-name>
+        <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+    </init-param>
+
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>system</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>oracle</param-value>
+    </context-param>
+
+
     <servlet>
         <servlet-name>ServletTour</servlet-name>
         <servlet-class>ServletDemo</servlet-class>
@@ -94,20 +109,6 @@
         <servlet-class>HttpSessionEventLogout</servlet-class>
     </servlet>
 
-    <init-param>
-        <param-name>driver</param-name>
-        <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
-    </init-param>
-
-    <context-param>
-        <param-name>username</param-name>
-        <param-value>system</param-value>
-    </context-param>
-    <context-param>
-        <param-name>password</param-name>
-        <param-value>oracle</param-value>
-    </context-param>
-
     <servlet-mapping>
         <servlet-name>ServletTour</servlet-name>
         <url-pattern>/welcome</url-pattern>
@@ -192,5 +193,15 @@
         <servlet-name>HttpSessionEventLogout</servlet-name>
         <url-pattern>/logoutHttpSessionEvent</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>ServletFilter</filter-name>
+        <filter-class>MyFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ServletFilter</filter-name>
+        <url-pattern>/servletFilter</url-pattern>
+    </filter-mapping>
 
 </web-app>
