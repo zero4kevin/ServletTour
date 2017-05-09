@@ -40,9 +40,44 @@
         <url-pattern>/servletFilter</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.zero4kevin.ServletTour.AuthenticationFilter.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/authentication</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>AuthenticationServlet</servlet-name>
+        <servlet-class>com.zero4kevin.ServletTour.AuthenticationFilter.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthenticationServlet</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
 
+    <filter>
+        <filter-name>FilterConfig</filter-name>
+        <filter-class>com.zero4kevin.ServletTour.FilterConfig.MyFilter</filter-class>
+        <init-param>
+            <param-name>construction</param-name>
+            <param-value>no</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterConfig</filter-name>
+        <url-pattern>/servletFilterConfig</url-pattern>
+    </filter-mapping>
 
-
+    <servlet>
+        <servlet-name>FilterConfigServlet</servlet-name>
+        <servlet-class>com.zero4kevin.ServletTour.FilterConfig.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FilterConfigServlet</servlet-name>
+        <url-pattern>/servletFilterConfig</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>ServletTour</servlet-name>
