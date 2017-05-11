@@ -156,7 +156,23 @@
         <servlet-class>ProfileHttpSession</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>ServletOutputStream</servlet-name>
+        <servlet-class>com.zero4kevin.ServletTour.InputAndOutputStream.DisplayImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletOutputStream</servlet-name>
+        <url-pattern>/servletOutputStream</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.zero4kevin.ServletTour.Upload.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletTour</servlet-name>
         <url-pattern>/welcome</url-pattern>
